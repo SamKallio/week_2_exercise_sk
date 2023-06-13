@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "static")));
 
 app.use("/hello", require("./hello"));
-app.use("/echo", require("./dog"));
+app.use("/echo", require("./echo"));
 app.use("/sum", require("./sum"));
 app.use("/list", require("./list"));
 
