@@ -8,9 +8,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, "static")));
 
-app.use("/hello", require("./hello/hello.js"));
-app.use("/echo", require("./echo/dog.js"));
-app.use("/sum", require("./sum/sum.js"));
-app.use("/list", require("./list/list.js"));
+app.use("/hello", require("./hello"));
+app.use("/echo", require("./dog"));
+app.use("/sum", require("./sum"));
+app.use("/list", require("./list"));
 
 app.listen(port, () => console.log(`Listening to a port ${port}!`));
